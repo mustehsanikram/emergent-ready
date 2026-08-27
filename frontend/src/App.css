@@ -1,0 +1,280 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #f5f6fa;
+  color: #1f2430;
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  padding: 1.25rem 2rem;
+  background: #1f2937;
+  color: white;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.app-subtitle {
+  margin: 0.15rem 0 0;
+  color: #9ca3af;
+  font-size: 0.9rem;
+}
+
+.app-status {
+  padding: 3rem;
+  text-align: center;
+  font-size: 1.1rem;
+  color: #6b7280;
+}
+
+.banner {
+  padding: 0.75rem 2rem;
+  cursor: pointer;
+}
+
+.banner-error {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.banner-dismiss {
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+.app-body {
+  flex: 1;
+  display: flex;
+  gap: 1.5rem;
+  padding: 1.5rem 2rem;
+}
+
+.sidebar {
+  width: 260px;
+  flex-shrink: 0;
+  background: white;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  height: fit-content;
+}
+
+.sidebar-title {
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #6b7280;
+  margin: 0 0 0.75rem;
+}
+
+.project-list {
+  list-style: none;
+  margin: 0 0 1rem;
+  padding: 0;
+}
+
+.project-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.55rem 0.6rem;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 0.25rem;
+}
+
+.project-item:hover {
+  background: #f3f4f6;
+}
+
+.project-item.active {
+  background: #eef2ff;
+}
+
+.project-item-main {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.project-name {
+  font-weight: 500;
+}
+
+.project-progress {
+  font-size: 0.75rem;
+  color: #9ca3af;
+}
+
+.new-project-form {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.new-project-form input {
+  flex: 1;
+  min-width: 0;
+  padding: 0.45rem 0.6rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+}
+
+.board {
+  flex: 1;
+  min-width: 0;
+}
+
+.new-task-form {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+  background: white;
+  padding: 0.75rem;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.new-task-form input {
+  flex: 1;
+  padding: 0.5rem 0.7rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+}
+
+.new-task-form select {
+  padding: 0.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 0.9rem;
+  background: #4f46e5;
+  color: white;
+  font-weight: 500;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.icon-btn {
+  background: transparent;
+  color: #9ca3af;
+  padding: 0 0.4rem;
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.icon-btn:hover {
+  color: #ef4444;
+}
+
+.board-columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.board-column {
+  background: #eef0f4;
+  border-radius: 10px;
+  padding: 0.75rem;
+  min-height: 200px;
+}
+
+.board-column h3 {
+  margin: 0 0 0.6rem;
+  font-size: 0.9rem;
+  color: #4b5563;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.column-count {
+  background: #d1d5db;
+  color: #374151;
+  font-size: 0.7rem;
+  padding: 0.05rem 0.4rem;
+  border-radius: 999px;
+}
+
+.task-card {
+  background: white;
+  border-radius: 8px;
+  padding: 0.6rem 0.7rem;
+  margin-bottom: 0.5rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+.task-card-top {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.priority-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.priority-low {
+  background: #9ca3af;
+}
+
+.priority-medium {
+  background: #f59e0b;
+}
+
+.priority-high {
+  background: #ef4444;
+}
+
+.task-title {
+  flex: 1;
+  font-size: 0.9rem;
+}
+
+.task-card-actions {
+  display: flex;
+  gap: 0.35rem;
+  margin-top: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.pill-btn {
+  background: #f3f4f6;
+  color: #374151;
+  font-size: 0.7rem;
+  padding: 0.2rem 0.5rem;
+  font-weight: 400;
+}
+
+.pill-btn:hover {
+  background: #e5e7eb;
+}
+
+.empty-hint {
+  color: #9ca3af;
+  font-size: 0.85rem;
+  font-style: italic;
+}
