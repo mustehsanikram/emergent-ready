@@ -45,6 +45,10 @@ npm test
 ## Deploying
 See `deploy/azure/README.md` and `deploy/aws/README.md` for step-by-step deployment to Azure App Service and AWS (Elastic Beanstalk or ECS/EKS).
 
+## Documentation
+- [`docs/PROJECT_PLAN.md`](docs/PROJECT_PLAN.md) — scope, milestones, risks, future work
+- [`docs/TECHNICAL_PLAN.md`](docs/TECHNICAL_PLAN.md) — architecture, data model, API design, production considerations
+
 ## API summary
 | Method | Path | Description |
 |---|---|---|
